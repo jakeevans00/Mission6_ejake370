@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Submit a Movie";
+}
+@model Mission6_ejake370.Models.Movie
+
+<h1>Submit a movie to my collection</h1>
+<form method="post">
+    <label asp-for="category">Category:</label>
+    <select asp-for="category">
+        <option value="Action/Adventure">Action/Adventure</option>
+        <option value="Comedy">Romance</option>
+        <option value="Drama">Drama</option>
+        <option value="Family">Family</option>
+        <option value="Horror/Suspense">Horror/Suspense</option>
+        <option value="Misc">Misc</option>
+        <option value="Television">Television</option>
+        <option value="VHS">VHS</option>
+    </select>
+    <br />
+    <label asp-for="title">Title:</label>
+    <input asp-for="title" />
+    <br />
+    <label asp-for="year">Year:</label>
+    <input asp-for="year"/>
+    <br />
+    <label asp-for="director">Director:</label>
+    <input asp-for="director" />
+    <br />
+    <label asp-for="rating">Rating:</label>
+    <select asp-for="rating">
+        <option value="G">G</option>
+        <option value="PG">PG</option>
+        <option value="PG-13">PG-13</option>
+        <option value="R">R</option>
+    </select>
+    <br />
+    <label asp-for="edited">Edited</label>
+    <select asp-for="edited">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br />
+    <label asp-for="lentTo">Lent To:</label>
+    <input asp-for="lentTo" />
+    <br />
+    <label asp-for="notes">Notes</label>
+    <input asp-for="notes" />
+
+    <button action="submit">Submit Movie</button>
+</form>
+
+<br />
+
